@@ -4,7 +4,7 @@ class MovieDetails extends Component {
     render() {
         return (
             <h1>
-                Mike 
+                Mike Solone
             </h1>
         );
     }
