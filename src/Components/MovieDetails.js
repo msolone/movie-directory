@@ -4,7 +4,7 @@ class MovieDetails extends Component {
     render() {
         return (
             <h1>
-                Movie Details
+                Mike 
             </h1>
         );
     }
