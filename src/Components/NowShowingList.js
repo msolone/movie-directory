@@ -6,7 +6,7 @@ class NowShowingList extends Component {
     return (
       <section>
           <Link to={'./hello'}>
-        <h1> Now Showing Jeff </h1>
+        <h1> Now Showing Jeff Webb </h1>
         </Link>
       </section>
     );
