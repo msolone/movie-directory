@@ -44,6 +44,16 @@ html {
   width: 100%;
 }
 
+.media-choice {
+  display: flex;
+  justify-content: center;
+}
+
+.media-choice h1 {
+  font-size: 5em;
+  padding: 2em;
+}
+
 .movie-details {
   display: flex;
   justify-content: space-between;

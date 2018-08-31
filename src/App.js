@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import NowShowingList from "./Components/NowShowingList";
+import MediaChoice from "./Components/MediaChoice";
+import MovieList from "./Components/MovieList";
+import TVList from "./Components/TVList";
 import MovieDetails from "./Components/MovieDetails";
+import TVDetails from "./Components/TVDetails";
 
 class App extends Component {
   render() {
-    // console.log(this.state.data.results[0].title);
     return (
       <Router>
         <section className="main">
@@ -15,8 +17,11 @@ class App extends Component {
           </section>
           <section className="body">
             <Switch>
-              <Route path="/" exact component={NowShowingList} />
-              <Route path="/:id" exact component={MovieDetails} />
+              <Route path="/" exact component={MediaChoice} /> 
+              <Route path="/movie" exact component={MovieList} />
+              <Route path="/tv" exact component={TVList} />
+              <Route path="/movie/:id" exact component={MovieDetails} />
+              <Route path="/tv/:id" exact component={TVDetails} />
             </Switch>
           </section>
           <section className="footer">

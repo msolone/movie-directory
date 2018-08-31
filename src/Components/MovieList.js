@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
-class NowShowingList extends Component {
+class MovieList extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,7 +35,7 @@ class NowShowingList extends Component {
       <section>
       {this.state.data.results.map((movie, i ) => {
         return (
-        <Link to={`./${movie.id}`} key={i}>
+        <Link to={`./movie/${movie.id}`} key={i}>
           <h1>{movie.id}</h1>
           <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}/>
         </Link>
@@ -47,4 +47,4 @@ class NowShowingList extends Component {
   }
 }
 
-export default NowShowingList;
+export default MovieList;
