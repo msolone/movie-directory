@@ -7,7 +7,8 @@ class MediaList extends Component {
     this.state = {
       data: {
         results: [{}]
-      }
+      },
+      mediaType: this.props.match.params.media
     };
   }
 
@@ -39,7 +40,7 @@ class MediaList extends Component {
       <section>
         {this.state.data.results.map((movie, i) => {
           return (
-            <Link to={`./movie/${movie.id}`} key={i}>
+            <Link to={`./${this.state.mediaType}/${movie.id}`} key={i}>
               <h1>{movie.title}</h1>
               <img
                 src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

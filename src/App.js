@@ -3,8 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import MediaChoice from "./Components/MediaChoice";
 import MediaList from "./Components/MediaList";
-import MovieDetails from "./Components/MovieDetails";
-import TVDetails from "./Components/TVDetails";
+import MediaDetails from "./Components/MediaDetails"
+
 
 class App extends Component {
   render() {
@@ -16,11 +16,9 @@ class App extends Component {
           </section>
           <section className="body">
             <Switch>
-              <Route path="/" exact component={MediaChoice} /> 
+              <Route path="/" exact component={MediaChoice} />
               <Route path="/:media" exact component={MediaList} />
-              {/* <Route path="/:media" exact component={TVList} /> */}
-              <Route path="/movie/:id" exact component={MovieDetails} />
-              <Route path="/tv/:id" exact component={TVDetails} />
+              <Route path="/:media/:id" exact component={MediaDetails} />
             </Switch>
           </section>
           <section className="footer">
