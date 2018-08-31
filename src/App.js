@@ -41,7 +41,7 @@ class App extends Component {
           <section className='body'>
           <Switch>
             <Route path="/" exact component={NowShowingList} />
-            <Route path="/:key" exact component={MovieDetails} />
+            <Route path="/:id" exact component={MovieDetails} />
           </Switch>
           </section>
         </section>
