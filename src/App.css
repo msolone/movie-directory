@@ -3,6 +3,7 @@ body {
 }
 html {
   height: 100%;
+  background: #2B2D42;
 }
 #root {
   height: 100%;
@@ -12,14 +13,56 @@ html {
   display: flex;
   flex-direction: column;
 
+
 }
 
 .header {
-  flex-grow: 1;
-  background: yellow;
+  color: #F8F32B;
+  flex-grow: 2;
+  background: black;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .body {
-  flex-grow: 8;
-  background: red;
+  color: #FFFFFF;
+  flex-grow: 6;
+  background: #2B2D42;
+  height: 100%
+ 
+}
+
+.footer {
+  color: #F8F32B;
+  flex-grow: 2;
+  background: black;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.movie-details {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.movie-details-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 2em;
+}
+
+.movie-details-info h1 {
+  font-size: 3em;
+}
+
+.movie-details img {
+  width: 20em;
+  height: 85%;
+  padding-top: 5em;
 }
