@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import MediaChoice from "./Components/MediaChoice";
-import MovieList from "./Components/MovieList";
-import TVList from "./Components/TVList";
+import MediaList from "./Components/MediaList";
 import MovieDetails from "./Components/MovieDetails";
 import TVDetails from "./Components/TVDetails";
 
@@ -18,8 +17,8 @@ class App extends Component {
           <section className="body">
             <Switch>
               <Route path="/" exact component={MediaChoice} /> 
-              <Route path="/movie" exact component={MovieList} />
-              <Route path="/tv" exact component={TVList} />
+              <Route path="/:media" exact component={MediaList} />
+              {/* <Route path="/:media" exact component={TVList} /> */}
               <Route path="/movie/:id" exact component={MovieDetails} />
               <Route path="/tv/:id" exact component={TVDetails} />
             </Switch>

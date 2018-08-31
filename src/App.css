@@ -47,11 +47,14 @@ html {
 .media-choice {
   display: flex;
   justify-content: center;
+
 }
 
 .media-choice h1 {
   font-size: 5em;
   padding: 2em;
+  color: #F8F32B;
+  text-decoration: none;
 }
 
 .movie-details {
