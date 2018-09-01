@@ -67,7 +67,7 @@ html {
 
 .body {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   color: #FFFFFF;
   flex-grow: 6;
@@ -157,4 +157,26 @@ html {
   height: 2em;
   width: 10em;
   padding: 0 0.5em;
+}
+
+.movie-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-list-list {
+  display: flex;
+ 
+}
+
+.movie-list-img {
+  height: 25em;
+  width: 25em;
+}
+
+.movie-list-input {
+  background:white;
+  margin: 1em;
+  width: 75em;
+  height: 3em;
 }
