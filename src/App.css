@@ -3,7 +3,8 @@ body {
 }
 html {
   height: 100%;
-  background: #2B2D42;
+  background: #CECCCC;
+  /* background: #2B2D42; */
 }
 #root {
   height: 100%;
@@ -17,6 +18,9 @@ html {
 }
 
 .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: #F8F32B;
   flex-grow: 2;
   background: black;
@@ -26,10 +30,48 @@ html {
   width: 100%;
 }
 
+.header h2 {
+  padding: 0 2em;
+
+
+}
+
+.logo {
+  background: #F8F32B;
+  color: black;
+  text-align: center;
+
+}
+
+.logo a {
+  color: black;
+ text-decoration: none;
+}
+
+
+
+.header-links {
+  display: flex;
+  justify-content: center;
+  background: #F8F32B;
+ 
+}
+
+.header-links a {
+  padding: 0 2em;
+  color: black;
+  border-right: 0.1em solid black;
+  text-decoration: none;
+
+}
+
 .body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #FFFFFF;
   flex-grow: 6;
-  background: #2B2D42;
+  background: #CECCCC;
   height: 100%
  
 }
@@ -49,7 +91,7 @@ html {
   justify-content: center;
 
 }
-
+ 
 .media-choice h1 {
   font-size: 5em;
   padding: 2em;
@@ -58,24 +100,61 @@ html {
 }
 
 .movie-details {
+  background: black;
   display: flex;
   justify-content: space-between;
-  height: 100%;
+  height:79%;
+  width: 90%;
+  border-radius: 2em;
 }
 
 .movie-details-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 2em;
+  padding: 0 2em 0 0;
 }
 
 .movie-details-info h1 {
   font-size: 3em;
 }
 
+.movie-details-info h2 {
+  text-align: center;
+}
+
 .movie-details img {
   width: 20em;
   height: 85%;
-  padding-top: 5em;
+  padding: 2em 3em;
+  border-radius: 4em;
+  
+}
+
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40em;
+  height: 3em;
+  background: #F8F32B;
+  border-radius: 1em;
+}
+
+.form-wrapper input {
+  width: 40em;
+  height: 2em;
+  padding: 0 0.5em 0 1em;
+  border: black solid 0.1em;
+  border-radius: 0.5em;
+  margin-right: 1em;
+}
+
+.form-wrapper button {
+  background: black;
+  color: #F8F32B;
+  border-radius: 0.5em;
+  height: 2em;
+  width: 10em;
+  padding: 0 0.5em;
 }
