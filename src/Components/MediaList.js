@@ -6,14 +6,24 @@ class MediaList extends Component {
     super(props);
     this.state = {
       data: {
-        results: [{
-          title: ''
-        }]
+        results: [
+          {
+            title: "",
+            name: ""
+          }
+        ]
       },
       mediaType: this.props.match.params.media,
-      search: ""
+      search: ''
     };
   }
+
+  updateSearch(event) {
+    this.setState({
+      search: event.target.value
+    });
+  }
+  
 
   componentDidMount() {
     let URL = "";
@@ -32,36 +42,41 @@ class MediaList extends Component {
         }
       })
       .then(json => {
+        // const _movie = {
+        //   title: json.results.title ? json.results.title : json.results.name,
+        // }
         this.setState({
           data: json
         });
       });
   }
 
-  updateSearch(event) {
-    this.setState({
-      search: event.target.value
-    });
-  }
-
   render() {
     console.log(this.state.data.results);
     let filteredMedia = this.state.data.results.filter(film => {
+      if (this.state.mediaType === 'movie') {
       return film.title.toLowerCase().includes(this.state.search.toLowerCase());
+      } else {
+        return film.name.toLowerCase().includes(this.state.search.toLowerCase());
+      }
     });
+    
     console.log(filteredMedia)
     return (
-      <section className="movie-list">
-        <input
-          className="movie-list-input"
-          type="text"
-          value={this.state.search}
-          onChange={this.updateSearch.bind(this)}
-        />
-        <section className="movie-list-list">
+      <section>
+        <section className="search-bar-container">
+          <input
+            className="search-bar"
+            type="text"
+            value={this.state.search}
+            onChange={this.updateSearch.bind(this)}
+            placeholder="Search here..."
+          />
+        </section>
+        <section className="movie-list">
           {filteredMedia.map((movie, i) => {
             return (
-              <Link to={`./${this.state.mediaType}/${movie.id}`} key={i}>
+              <Link to={`./${this.state.mediaType}/${movie.id}`} key={i} className='list-links'>
                 <img
                   className="movie-list-img"
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}

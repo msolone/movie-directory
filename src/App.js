@@ -13,21 +13,17 @@ class App extends Component {
           <section className="header">
             <section className="logo">
               <a href="http://localhost:3000">
-                <h2>JMDb</h2>
+                <h2>JMMDb</h2>
               </a>
             </section>
-            <form className="form-wrapper">
-              <input type="text" placeholder="Search here..." />
-              <button type="submit">SEARCH</button>
-            </form>
-            <section className="header-links">
-              <a href="http://localhost:3000/movie">
-                <h1>Movies</h1>
-              </a>
-              <a href="http://localhost:3000/tv">
-                <h1>TV Shows</h1>
-              </a>
-            </section>
+          <section className="header-links">
+            <a href="http://localhost:3000/movie">
+              <h1>Movies</h1>
+            </a>
+            <a href="http://localhost:3000/tv">
+              <h1>TV Shows</h1>
+            </a>
+          </section>
           </section>
           <section className="body">
             <Switch>

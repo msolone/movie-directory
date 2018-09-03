@@ -6,7 +6,7 @@ class MediaChoice extends Component {
         return (
             <div className='media-choice'>
                 <Link to='./movie'><h1>Movies</h1></Link>
-                <Link to='./tv'><h1>TV Shows</h1></Link>
+                <Link to='./tv'><h1>&nbsp;&nbsp;&nbsp;TV&nbsp;&nbsp;&nbsp;</h1></Link>
             </div>
         );
     }
