@@ -33,8 +33,8 @@ class MediaDetails extends Component {
       .then(json => {
         const _movie = {
           title: json.title ? json.title : json.name,
-          poster_path:json.poster_path,
-          overview:json.overview
+          poster_path: json.poster_path,
+          overview: json.overview
         };
         this.setState({
           movieData: _movie
@@ -61,8 +61,8 @@ class MediaDetails extends Component {
     // console.log(this.state.movieCast);
     return (
       <section className="movie-details">
-        <section>
-          <img
+        <section className="poster">
+          <img 
             src={`https://image.tmdb.org/t/p/w500${
               this.state.movieData.poster_path
             }`}
