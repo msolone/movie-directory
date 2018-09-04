@@ -42,9 +42,6 @@ class MediaList extends Component {
         }
       })
       .then(json => {
-        // const _movie = {
-        //   title: json.results.title ? json.results.title : json.results.name,
-        // }
         this.setState({
           data: json
         });
@@ -80,6 +77,7 @@ class MediaList extends Component {
                 <img
                   className="movie-list-img"
                   src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt='movie img'
                 />
               </Link>
             );

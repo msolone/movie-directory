@@ -86,11 +86,11 @@ html {
 .media-choice {
   display: flex;
   justify-content: center;
+  align-items: center;
 
 }
  
 .media-choice h1 {
-  max-width: 10em;
   border: solid 3px black;
   border-radius: 2em;
   background: black;
@@ -103,6 +103,21 @@ html {
 .media-choice a {
   text-decoration: none;
 }
+
+.movie-of-the-week-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.movie-of-the-day-img {
+  height: 35em;
+  width: 20em;
+  border-radius: 2em;
+}
+
+
 
 .search-bar-container {
   display: flex;
